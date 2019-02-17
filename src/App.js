@@ -4,6 +4,8 @@ import CategoryButton from './components/button';
 import MoreButton from './components/dropdownButton/';
 
 
+// during development used Chrome (version 72) browser
+
 class App extends Component {
 
 // active button state is held in the array of objects, by default All button is true and other are false 
