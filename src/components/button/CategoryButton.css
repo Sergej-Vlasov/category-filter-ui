@@ -1,0 +1,90 @@
+.button {
+    display: inline-block;
+    height: 30px;
+    margin: 0 4px 0 0;
+    padding: 0 16px;
+    line-height: 28px;
+    border: 1px solid #e0e7ed;
+    border-radius: 2px;
+    background-color: transparent;
+}
+
+.button__text {
+    font-size: 13px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #51697a;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.button__text--more {
+    color: #6d8494;
+    padding: 0 15px;
+}
+
+.button__text--right {
+    color: inherit;
+    text-align: right;
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.button__svg {
+    position: relative;
+    display: inline-block;
+    width: 11.2px;
+    height: 7px;
+    margin-right: 12px;
+    left: 15px;
+    line-height: 5px;
+    transition: transform 100ms ease-in-out;
+}
+
+.button__svg__cross--container {
+    position: relative;
+    display: inline-block;
+    left: 11px;
+    top: 1px;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    line-height: 5px;
+}
+
+.button__svg--cross {
+
+    background-color: #1979c9;
+    color: #1e93f5;
+    border-radius: 2px;
+    margin-right: 3px;
+}
+
+.button__svg--active {
+    transform: rotate(180deg);
+}
+
+.button__svg__cross {
+    fill:none;
+    stroke:currentColor;
+    stroke-miterlimit:10;
+    stroke-width: 2px;
+}
+
+.button--active {
+    background-color: #1e93f5;
+    border-color: #1e93f5;
+    color: white;
+}
+
+.button:hover {
+    background-color: #1e93f5;
+    border-color: #1e93f5;
+    color: white;
+    cursor: pointer;
+}
+.button:focus {
+    box-shadow: 0 2px 5px 0 rgba(23,35,44,0.24), 0 -1px 5px 0 rgba(23,35,44,0.2);
+    outline: none;
+}
