@@ -8,6 +8,7 @@ import MoreButton from './components/dropdownButton/';
 
 class App extends Component {
 
+// RETHINK THE SELECTION MECHANISM
 // active button state is held in the array of objects, by default All button is true and other are false 
   state = {
     moreSelected: false, // More - active style while Commercial, Luxury, Pickup and Convertible ARE selecterd 
@@ -38,6 +39,7 @@ class App extends Component {
     //  changes the activet style of the clicked button
     buttons[btnNum].button = !buttons[btnNum].button;
 
+    // REVISIT THIS AND SUBSEQUENT CODE TO AVOID REPETITION
     // checks whether all car categories are selected, if yes, ALL button is activated
     if ((buttons[1].button) &&
       (buttons[2].button) &&
@@ -141,6 +143,7 @@ class App extends Component {
     return (
       <div className="App">
         {/*
+        REVISIT COMPONENTS TO REDUCE COMPLEXITY
         each CategoryButton receives these props:
         - click - to handle onClick event
         - minPrice - hardcoded price value
@@ -162,6 +165,7 @@ class App extends Component {
           {/* when MORE button is active dropdown is activated */}
           <div className={`dropdown dropdown__content ${this.state.buttons[10].button ? ' dropdown__content--active': ''}`}>
             <div className='dropdown__container'>
+              {/* REVISIT TO REDUCE CODE */}
               {/* MoreButton receives props similar to CategoryButton, but the layout is different */}
               <MoreButton click={this.buttonStyleHandler.bind(this, 6)} clickOnly={this.buttonStyleOnlyHandler.bind(this, 6)} activeStyle={this.state.buttons[6].button} minPrice="$360">Commercial</MoreButton>
               <MoreButton click={this.buttonStyleHandler.bind(this, 7)} clickOnly={this.buttonStyleOnlyHandler.bind(this, 7)} activeStyle={this.state.buttons[7].button} minPrice="$1521">Luxury</MoreButton>
